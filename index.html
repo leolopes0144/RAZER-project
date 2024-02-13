@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <title>animações</title>
+            <link href="css/style.css" type="text/css" rel="stylesheet" />
+            <meta charset="utf-08" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+            <meta name="description" content="Descricao do meu site" />
+            <meta name="keywords" content="palavras,separadas,por,virgula" />
+            <meta name="author" content="Leonardo Lopes" />
+            <style>
+                 /* Estilizando a cor de fundo do audio player */
+        #audioPlayer {
+            background-color: black;
+            border: none;
+            display: none; /* Oculta o player de áudio padrão */
+        }
+            </style>
+        </head>
+
+        <body>
+            <div class="box">
+                <img src="images/razer.jpg">
+            </div><!--box-->
+            <div class="waviy">
+                <span style="--i:1">R</span>
+                <span style="--i:2">A</span>
+                <span style="--i:3">Z</span>
+                <span style="--i:4">E</span>
+                <span style="--i:5">R</span>
+               </div>
+               <audio controls loop id="audioPlayer">
+                <source src="music/Zak Downtown - Zones (Lyrics).mp3" type="audio/mp3">
+            </audio>
+            <div id="buttonsContainer">
+                <!-- Botão de reprodução/pausa -->
+                <button id="playPauseButton">&#9654;</button>
+            </div>
+            <!-- Importando o arquivo JavaScript -->
+            <script src="index.js"></script>
+        </body>
+
+    </html>

@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Ajuste para organizar elementos verticalmente */
+    overflow-y: hidden; /* Impede a rolagem vertical */
+}
+
+.box{ 
+    text-align: center;
+}
+
+.box img{
+    width: 40%;  
+    animation-name: animacao;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao {
+    0%{
+        box-shadow: none;
+    }
+
+    25%{
+        box-shadow: -10px 10px 20px 5px #1BEA0D;
+    }
+
+    50%{
+        box-shadow: 10px 10px 20px 5px #1BEA0D;
+    }
+
+    100%{
+        box-shadow: none;
+    }
+}
+
+.waviy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+  }
+
+  .waviy span {
+    font-size: 100px;
+    font-weight: 700;
+    color: #1BEA0D;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+    font-family: "Roboto", sans-serif;
+}
+
+.waviy:hover span{
+      text-shadow: 0 0 10px #58ff4c;
+  }
+
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+/* Estilizando o botão de reprodução/pausa */
+#playPauseButton {
+    font-size: 24px;
+    color: #1BEA0D; /* Cor do ícone */
+    cursor: pointer;
+    border: none;
+    padding: 5px; /* Adicione espaçamento interno conforme necessário */
+}
+
+  #buttonsContainer {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    align-items: center;
+  }
+
+/* Consulta de mídia para telas menores (dispositivos móveis, por exemplo) */
+@media only screen and (max-width: 600px) {
+    .waviy span {
+        font-size: 50px; /* Ajuste o tamanho conforme necessário para telas menores */
+    }
+}
